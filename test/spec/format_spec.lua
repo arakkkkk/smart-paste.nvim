@@ -1,11 +1,19 @@
 local smart_paste = require("smart-paste")
-print("\n\n\n\n\n\n\n")
 
 describe("smart-paste", function()
 	it("works!", function()
-		local content = ""
+		local file, err = io.open("./mock/test1.html", "r")
+		local content = file:read("*a") -- ファイル全体を読み込む
+		file:close()
+
 		local formatter = require("formatter")
 		local res = formatter.format_html(content)
-		print(res)
+
+		local tmp_file, err = io.open("./mock/test1.md", "r")
+		local template = tmp_file:read("*a") -- ファイル全体を読み込む
+		tmp_file:close()
+
+		assert(res == template)
 	end)
 end)
+print("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")

@@ -5,9 +5,9 @@ local M = {}
 -- 書式判定
 
 -- 書式によるフォーマット
-local res = require("reader").read()
-print(res.format)
-print(res.content)
+-- local res = require("reader").read()
+-- print(res.format)
+-- print(res.content)
 
 -- ペースト処理
 

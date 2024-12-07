@@ -1,0 +1,10 @@
+local smart_paste = require("smart-paste")
+
+describe("smart-paste", function()
+	it("works!", function()
+		local reader = require("reader")
+		local res, err = reader.read()
+		assert(type(res) == "string", err)
+	end)
+end)
+print("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
