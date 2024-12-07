@@ -7,7 +7,7 @@ local formats = {
 }
 
 -- フォーマット判定関数
-M.run = function()
+M.read = function()
 	for _, format in ipairs(formats) do
 		-- xclipでデータ取得を試みる
 		local handle = io.popen("xclip -selection clipboard -target " .. format .. " -o 2>/dev/null")

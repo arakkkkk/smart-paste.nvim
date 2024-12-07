@@ -3,6 +3,9 @@ print("\n\n\n\n\n\n\n")
 
 describe("smart-paste", function()
 	it("works!", function()
-		vim.cmd("SmartPaste")
+		local content = ""
+		local formatter = require("formatter")
+		local res = formatter.format_html(content)
+		print(res)
 	end)
 end)
