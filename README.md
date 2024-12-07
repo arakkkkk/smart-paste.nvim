@@ -6,6 +6,10 @@
 
 ## Installation
 
+### Requirements
+* Linux(x11)
+    * xclip
+
 ## Usage
 
 ## Future Development
