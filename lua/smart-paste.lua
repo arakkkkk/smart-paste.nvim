@@ -1,22 +1,20 @@
 local M = {}
 
--- OS判定
+M.smart_paste = function()
+	-- OS判定
 
--- 書式判定
+	-- 書式判定
+	local format, content, err = require("reader").read()
 
--- 書式によるフォーマット
--- local res = require("reader").read()
--- print(res.format)
--- print(res.content)
+	-- 書式によるフォーマット
+	local content_treated = require("formatter").format(format, content)
 
--- ペースト処理
-
-M.test = function()
-	print("ok")
+	-- ペースト処理
+	require("writer").write_text(content_treated)
 end
 
 function M.setup()
-	vim.api.nvim_create_user_command("SmartPaste", M.test, {})
+	vim.api.nvim_create_user_command("SmartPaste", M.smart_paste, {})
 end
 
 return M
