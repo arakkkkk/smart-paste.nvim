@@ -29,5 +29,3 @@
 * [ ] text/plane
 * [ ] text/html
 * [ ] image/png
-
-
